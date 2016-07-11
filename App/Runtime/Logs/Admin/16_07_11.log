@@ -144,3 +144,15 @@ ERR: 模板不存在:./App/Admin/View/User/del.html
 ERR: 1048:Column 'member_pass' cannot be null
  [ SQL语句 ] : UPDATE `member` SET `member_name`='yyyv',`member_age`='11',`member_sex`='0',`member_email`='eee@.com',`member_sectioner`='0',`member_state`='0',`member_address`='江西',`member_pass`=NULL WHERE `member_id` = 2
 
+[ 2016-07-11T20:33:08+08:00 ] ::1 /discuz/index.php/Admin/Member/ban/id/1
+ERR: 1054:Unknown column 'id' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `member` WHERE ( id=1 ) 
+
+[ 2016-07-11T20:33:47+08:00 ] ::1 /discuz/index.php/Admin/Member/ban/id/1
+ERR: 1054:Unknown column 'id' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `member` WHERE ( id=1 ) 
+
+[ 2016-07-11T20:35:55+08:00 ] ::1 /discuz/index.php/Admin/Member/ban/id/1
+ERR: 1054:Unknown column 'id' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `member` WHERE ( id=1 ) 
+

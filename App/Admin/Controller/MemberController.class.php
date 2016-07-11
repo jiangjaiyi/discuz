@@ -69,6 +69,7 @@ class MemberController extends CommonController {
 			$this->error($model->getError());
 		}
 		// 更新数据
+		
 		if(false !== $model->save()) {
 			// 回调接口
 			if (method_exists($this, '_tigger_update')) {
@@ -82,5 +83,22 @@ class MemberController extends CommonController {
 			$this->error(L('更新失败'));
 		}
 	}
-	
+	public function ban()
+	{
+		$model = D(CONTROLLER_NAME);
+		
+		$data['member_state'] =2; 
+		if(false !== $model->where("member_id={$_REQUEST['id']}")->save($data)) {
+			// 回调接口
+			if (method_exists($this, '_tigger_update')) {
+				$this->_tigger_update($model);
+			}
+			
+			//成功提示
+			$this->success(L('更新状态成功'));
+		} else {
+			//错误提示
+			$this->error(L('更新状态失败'));
+		}
+	}
 }
