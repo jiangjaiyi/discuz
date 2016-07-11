@@ -11,5 +11,4 @@ return array(
     'MODULE_ALLOW_LIST'     =>   array('Home','Admin'),
     'DEFAULT_MODULE'        =>  'Admin',
     'SHOW_PAGE_TRACE'       =>   true, 
-
 );

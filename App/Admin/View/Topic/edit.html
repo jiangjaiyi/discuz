@@ -587,13 +587,15 @@
 
 											<!-- BEGIN FORM-->
 
-											<form action="__URL__/insert" class="form-horizontal" method="post">
+											<form action="__URL__/update" class="form-horizontal" method="post">
 
 												<div class="control-group">
 
 													<label class="control-label">版主id</label>
 
 													<div class="controls">
+
+														<input type="hidden" name="topic_id" placeholder="" class="m-wrap small" value="{$vo.topic_id}" />
 
 														<input type="text" name="topic_masterid" placeholder="" class="m-wrap small" value="{$vo.topic_masterid}" />
 

@@ -26,7 +26,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 	<meta charset="utf-8" />
 
-	<title>Metronic | Admin Dashboard Template</title>
+	<title>后台管理</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -169,27 +169,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li>
-
-					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
-
-					<form class="sidebar-search">
-
-						<div class="input-box">
-
-							<a href="javascript:;" class="remove"></a>
-
-							<input type="text" placeholder="Search..." />
-
-							<input type="button" class="submit" value=" " />
-
-						</div>
-
-					</form>
-
-					<!-- END RESPONSIVE QUICK SEARCH FORM -->
-
-				</li>
+				
 
 				<li class="start active ">
 
@@ -289,7 +269,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						<li >
 
-							<a href="/discuz/index.php/Admin/Mumber/index">
+							<a href="/discuz/index.php/Admin/Member/index">
 
 							浏览用户信息</a>
 

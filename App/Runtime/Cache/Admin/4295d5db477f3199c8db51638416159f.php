@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>Metronic | Form Stuff - Form Layouts</title>
+	<title>浏览员工信息</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -39,6 +39,14 @@
 	<link href="/discuz/Public/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 
 	<!-- END GLOBAL MANDATORY STYLES -->
+
+	<!-- BEGIN PAGE LEVEL STYLES -->
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/select2_metro.css" />
+
+	<link rel="stylesheet" href="/discuz/Public/media/css/DT_bootstrap.css" />
+
+	<!-- END PAGE LEVEL STYLES -->
 
 	<link rel="shortcut icon" href="/discuz/Public/media/image/favicon.ico" />
 
@@ -141,11 +149,9 @@
 
 				</li>
 
-				<li>
+				
 
-				</li>
-
-				<li class="start">
+				<li class="start  ">
 
 					<a href="/discuz/index.php/Admin/Index/index">
 
@@ -219,7 +225,7 @@
 				</li>
 
 				
-				<li class="">
+				<li class="active">
 
 					<a href="javascript:;">
 
@@ -233,7 +239,7 @@
 
 					<ul class="sub-menu">
 
-						<li >
+						<li class="active">
 
 							<a href="/discuz/index.php/Admin/User/index">
 
@@ -254,7 +260,7 @@
 				</li>
 
 
-				<li class="active">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -279,7 +285,7 @@
 						</li>
 
 
-							<li class="active">
+							<li >
 
 							<a href="/discuz/index.php/Admin/Topic/add">
 
@@ -451,7 +457,7 @@
 
 		<!-- END SIDEBAR -->
 
-		<!-- BEGIN PAGE -->  
+		<!-- BEGIN PAGE -->
 
 		<div class="page-content">
 
@@ -477,11 +483,11 @@
 
 			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
 
-			<!-- BEGIN PAGE CONTAINER-->
+			<!-- BEGIN PAGE CONTAINER-->        
 
 			<div class="container-fluid">
 
-				<!-- BEGIN PAGE HEADER-->   
+				<!-- BEGIN PAGE HEADER-->
 
 				<div class="row-fluid">
 
@@ -577,9 +583,11 @@
 
 						<!-- END BEGIN STYLE CUSTOMIZER -->  
 
+						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+
 						<h3 class="page-title">
 
-							添加版块
+							浏览员工信息
 
 						</h3>
 
@@ -591,21 +599,23 @@
 
 								<a href="/discuz/index.php/Admin/Index/index">首页</a> 
 
-								<span class="icon-angle-right"></span>
+								<i class="icon-angle-right"></i>
 
 							</li>
 
 							<li>
 
-								版块管理
+								<a href="javascript:;">成员管理</a>
 
-								<span class="icon-angle-right"></span>
+								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li>添加版块</li>
+							<li>浏览员工信息</li>
 
 						</ul>
+
+						<!-- END PAGE TITLE & BREADCRUMB-->
 
 					</div>
 
@@ -615,97 +625,44 @@
 
 				<!-- BEGIN PAGE CONTENT-->
 
+				
+
 				<div class="row-fluid">
 
-					<div class="span12">
+					<div class="span6 responsive" data-tablet="span12 fix-offset" data-desktop="span6">
 
-						<!-- BEGIN SAMPLE FORM PORTLET-->   
+						<!-- BEGIN EXAMPLE TABLE PORTLET-->
 
-						<div class="portlet box blue tabbable">
+						<div class="portlet box grey">
 
 							<div class="portlet-title">
 
-								<div class="caption">
+								<div class="caption"><i class="icon-user"></i>Table</div>
 
-									<i class="icon-reorder"></i>
+								<div class="actions">
 
-									<span class="hidden-480">From</span>
+									<a href="/discuz/index.php/Admin/User/add" class="btn blue"><i class="icon-pencil"></i> Add</a>
 
-								</div>
+									<div class="btn-group">
 
-							</div>
+										<a class="btn green" href="#" data-toggle="dropdown">
 
-							<div class="portlet-body form">
+										<i class="icon-cogs"></i> Tools
 
-								<div class="tabbable portlet-tabs">
+										<i class="icon-angle-down"></i>
 
-									<ul class="nav nav-tabs" style="height:50px;">
+										</a>
 
-										
-									</ul>
+										<ul class="dropdown-menu pull-right">
 
-									<div class="tab-content">
+											<li><a id='edit' href="#"><i class="icon-pencil"></i> Edit</a></li>
 
-										<div class="tab-pane active" id="portlet_tab1">
+											<!-- <li><a id= 'del' href="/discuz/index.php/Admin/User/del/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>"><i class="icon-trash"></i> Delete</a></li> -->
+											<li><a id= 'del' href="#"><i class="icon-trash"></i> Delete</a></li>
 
-											<!-- BEGIN FORM-->
+											
 
-											<form action="/discuz/index.php/Admin/Topic/insert" class="form-horizontal" method="post">
-
-												<div class="control-group">
-
-													<label class="control-label">版主id</label>
-
-													<div class="controls">
-
-														<input type="text" name="topic_masterid" placeholder="" class="m-wrap small" />
-
-														<span class="help-inline"></span>
-
-													</div>
-
-												</div>
-
-												<div class="control-group">
-
-													<label class="control-label">版块名称</label>
-
-													<div class="controls">
-
-														<input type="hidden" name="topic_id" placeholder="" class="m-wrap large" />
-														<input type="text" name="topic_name" placeholder="" class="m-wrap large" />
-
-														<span class="help-inline"></span>
-
-													</div>
-
-												<br><br>
-
-												<div class="control-group">
-
-													<label class="control-label">版块主题</label>
-
-													<div class="controls">
-
-														<textarea name="topic_profile" class="large m-wrap" rows="4"></textarea>
-
-													</div>
-
-												</div>
-
-												<div class="form-actions">
-
-													<button type="submit" class="btn blue"><i class="icon-ok"></i>保存</button>
-
-													<input type="reset" class="btn">
-
-												</div>
-
-											</form>
-
-											<!-- END FORM-->  
-
-										</div>
+										</ul>
 
 									</div>
 
@@ -713,15 +670,77 @@
 
 							</div>
 
+							<div class="portlet-body">
+								<form action="">
+								<table class="table table-striped table-bordered table-hover" id="sample_2">
+
+									<thead>
+
+										<tr>
+
+											<th style="width:8px;"><input type="checkbox" class="group-checkable" data-set="#sample_2 .checkboxes" /></th>
+
+											<th>用户ID</th>
+											<th>用户名</th>
+											<th>性别</th>
+											<th>密码</th>
+
+											<th class="hidden-480">Email</th>
+											<th>注册时间</th>
+											<th class="hidden-480">用户地址</th>
+											<th class="hidden-480">用户角色</th>
+											
+
+										</tr>
+
+									</thead>
+
+									<tbody>
+
+										<?php if(is_array($list)): foreach($list as $key=>$vo): ?><tr class="odd gradeX"  >
+											<td><input type="checkbox" class="checkboxes" value="<?php echo ($vo["user_id"]); ?>" /></td>
+
+											<td><?php echo ($vo["user_id"]); ?></td>
+
+											
+
+											<td><?php echo ($vo["user_name"]); ?></td>
+											<td><?php if($vo["user_sex"] == 0 ): ?>男   <?php else: ?> 女<?php endif; ?></td>
+										
+
+											<td><?php echo ($vo["user_pass"]); ?></td>
+
+											<td class="hidden-480"><a href="mailto:shuxer@gmail.com"><?php echo ($vo["user_email"]); ?></a></td>
+
+											<td><?php echo ($vo["user_addtime"]); ?></td>
+
+											<td><?php echo ($vo["user_address"]); ?></td>
+
+											<td><?php echo ($vo["user_roleid"]); ?></td>
+
+											
+
+										</tr><?php endforeach; endif; ?>
+
+										
+
+									</tbody>
+
+								</table>
+								</form>
+							</div>
+
 						</div>
 
-						<!-- END SAMPLE FORM PORTLET-->
+						<!-- END EXAMPLE TABLE PORTLET-->
 
 					</div>
 
+					
+
 				</div>
 
-				<!-- END PAGE CONTENT-->         
+				<!-- END PAGE CONTENT-->
 
 			</div>
 
@@ -729,7 +748,7 @@
 
 		</div>
 
-		<!-- END PAGE -->  
+		<!-- END PAGE -->
 
 	</div>
 
@@ -791,23 +810,57 @@
 
 	<!-- END CORE PLUGINS -->
 
-	<script src="/discuz/Public/media/js/app.js"></script>     
+	<!-- BEGIN PAGE LEVEL PLUGINS -->
+
+	<script type="text/javascript" src="/discuz/Public/media/js/select2.min.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/jquery.dataTables.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/DT_bootstrap.js"></script>
+
+	<!-- END PAGE LEVEL PLUGINS -->
+
+	<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+	<script src="/discuz/Public/media/js/app.js"></script>
+
+	<script src="/discuz/Public/media/js/table-managed.js"></script>     
 
 	<script>
 
-		jQuery(document).ready(function() {   
-
-		   // initiate layout and plugins
+		jQuery(document).ready(function() {       
 
 		   App.init();
+
+		   TableManaged.init();
 
 		});
 
 	</script>
 
-	<!-- END JAVASCRIPTS -->   
-
 <script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-37564768-1']);  _gaq.push(['_setDomainName', 'keenthemes.com']);  _gaq.push(['_setAllowLinker', true]);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })();</script></body>
+
+
+<script type="text/javascript">
+		
+			
+			$('#edit').click(function(){
+				var data=0;
+				var data = $('span.checked').parent().parent().next().html();
+				$(this).attr('href','/discuz/index.php/Admin/User/edit/id/'+data);
+			});
+			
+			$('#del').click(function(){
+				var data =0;
+				var data = $('span.checked').first().parent().parent().next().html();
+				
+				// alert(data);
+				$(this).attr('href','/discuz/index.php/Admin/User/del/id/'+data);
+			});
+			
+		
+
+	</script>
 
 <!-- END BODY -->
 

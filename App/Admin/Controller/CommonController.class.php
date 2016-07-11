@@ -10,10 +10,10 @@ class CommonController extends Controller{
 	//在Controller类中构造方法执行后则会自动调用的方法。
 	public function _initialize(){
 		//是否的登录验证
-		//if(empty($_SESSION['adminuser'])){
-			//$this->redirect("Public/login");
-			//exit();
-		//}
+		// if(empty($_SESSION['adminuser'])){
+		// 	$this->redirect("Public/login");
+		// 	exit();
+		// }
 	}
 
 
@@ -28,11 +28,11 @@ class CommonController extends Controller{
 		if(!defined(CONTROLLER_NAME)){
 		   $model = D(CONTROLLER_NAME);
 		}
-	
+		
 		if(!empty($model)) {
 			$this->_list($model, $map);
 		}
-
+		// dump($list);
 		$this->display();
 		return;
 	}
@@ -87,6 +87,7 @@ class CommonController extends Controller{
 			if (method_exists($this, '_tigger_update')) {
 				$this->_tigger_update($model);
 			}
+			
 			//成功提示
 			$this->success(L('更新成功'));
 		} else {
@@ -211,7 +212,7 @@ class CommonController extends Controller{
 		$list = $model->where($map)->order($order.' '.$sort)
 						->limit($p->firstRow.','.$p->listRows)
 						->select();
-									
+						
 		//回调函数，用于数据加工，如将用户id，替换成用户名称
 		if (method_exists($this, '_tigger_list')) {
 			$this->_tigger_list($list);

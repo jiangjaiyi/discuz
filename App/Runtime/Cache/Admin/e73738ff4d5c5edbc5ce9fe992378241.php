@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>Metronic | Form Stuff - Form Layouts</title>
+	<title>添加员工</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -39,6 +39,40 @@
 	<link href="/discuz/Public/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 
 	<!-- END GLOBAL MANDATORY STYLES -->
+
+	<!-- BEGIN PAGE LEVEL STYLES -->
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/bootstrap-fileupload.css" />
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/jquery.gritter.css" />
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/chosen.css" />
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/select2_metro.css" />
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/jquery.tagsinput.css" />
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/clockface.css" />
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/bootstrap-wysihtml5.css" />
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/datepicker.css" />
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/timepicker.css" />
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/colorpicker.css" />
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/bootstrap-toggle-buttons.css" />
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/daterangepicker.css" />
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/datetimepicker.css" />
+
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/multi-select-metro.css" />
+
+	<link href="/discuz/Public/media/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+
+	<!-- END PAGE LEVEL STYLES -->
 
 	<link rel="shortcut icon" href="/discuz/Public/media/image/favicon.ico" />
 
@@ -117,6 +151,7 @@
 
 	</div>
 
+
 	<!-- END HEADER -->
 
 	<!-- BEGIN CONTAINER -->
@@ -141,11 +176,9 @@
 
 				</li>
 
-				<li>
+				
 
-				</li>
-
-				<li class="start">
+				<li class="start  ">
 
 					<a href="/discuz/index.php/Admin/Index/index">
 
@@ -219,7 +252,7 @@
 				</li>
 
 				
-				<li class="">
+				<li class="active">
 
 					<a href="javascript:;">
 
@@ -233,7 +266,7 @@
 
 					<ul class="sub-menu">
 
-						<li >
+						<li class="active">
 
 							<a href="/discuz/index.php/Admin/User/index">
 
@@ -254,7 +287,7 @@
 				</li>
 
 
-				<li class="active">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -279,7 +312,7 @@
 						</li>
 
 
-							<li class="active">
+							<li >
 
 							<a href="/discuz/index.php/Admin/Topic/add">
 
@@ -577,9 +610,11 @@
 
 						<!-- END BEGIN STYLE CUSTOMIZER -->  
 
+						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+
 						<h3 class="page-title">
 
-							添加版块
+							添加信息
 
 						</h3>
 
@@ -591,21 +626,26 @@
 
 								<a href="/discuz/index.php/Admin/Index/index">首页</a> 
 
-								<span class="icon-angle-right"></span>
+								<i class="icon-angle-right"></i>
 
 							</li>
 
 							<li>
 
-								版块管理
+								成员管理
 
-								<span class="icon-angle-right"></span>
+								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li>添加版块</li>
+							<li>浏览员工信息
+								<i class="icon-angle-right"></i>
+							</li>
+							<li>添加信息</li>
 
 						</ul>
+
+						<!-- END PAGE TITLE & BREADCRUMB-->
 
 					</div>
 
@@ -621,15 +661,21 @@
 
 						<!-- BEGIN SAMPLE FORM PORTLET-->   
 
-						<div class="portlet box blue tabbable">
+						<div class="portlet box blue">
 
 							<div class="portlet-title">
 
-								<div class="caption">
+								
 
-									<i class="icon-reorder"></i>
+								<div class="tools">
 
-									<span class="hidden-480">From</span>
+									<a href="javascript:;" class="collapse"></a>
+
+									
+
+									
+
+									<a href="javascript:;" class="remove"></a>
 
 								</div>
 
@@ -637,79 +683,132 @@
 
 							<div class="portlet-body form">
 
-								<div class="tabbable portlet-tabs">
+								<!-- BEGIN FORM-->
 
-									<ul class="nav nav-tabs" style="height:50px;">
+								<form method="post" action="/discuz/index.php/Admin/User/insert" class="form-horizontal">
 
-										
-									</ul>
+									<div class="control-group">
 
-									<div class="tab-content">
+										<label class="control-label">用户名</label>
 
-										<div class="tab-pane active" id="portlet_tab1">
+										<div class="controls">
 
-											<!-- BEGIN FORM-->
+											<input type="text" name="user_name" class="span6 m-wrap popovers" placeholder="请输入用户名" />
 
-											<form action="/discuz/index.php/Admin/Topic/insert" class="form-horizontal" method="post">
+										</div>
+									
+									</div>
+									
+									<div class="control-group">
 
-												<div class="control-group">
+										<label class="control-label">性别</label>
 
-													<label class="control-label">版主id</label>
+										<div class="controls">
 
-													<div class="controls">
+											<label class="radio">
 
-														<input type="text" name="topic_masterid" placeholder="" class="m-wrap small" />
+											<input type="radio" name="user_sex" value="0" checked />
 
-														<span class="help-inline"></span>
+											男
 
-													</div>
+											</label>
 
-												</div>
+											<label class="radio">
 
-												<div class="control-group">
+											<input type="radio" name="user_sex" value="1" />
 
-													<label class="control-label">版块名称</label>
+											女
 
-													<div class="controls">
+											</label>  
 
-														<input type="hidden" name="topic_id" placeholder="" class="m-wrap large" />
-														<input type="text" name="topic_name" placeholder="" class="m-wrap large" />
+											
 
-														<span class="help-inline"></span>
+										</div>
 
-													</div>
+									</div>
+									
 
-												<br><br>
+									<div class="control-group">
 
-												<div class="control-group">
+										<label class="control-label">密码</label>
 
-													<label class="control-label">版块主题</label>
+										<div class="controls">
 
-													<div class="controls">
-
-														<textarea name="topic_profile" class="large m-wrap" rows="4"></textarea>
-
-													</div>
-
-												</div>
-
-												<div class="form-actions">
-
-													<button type="submit" class="btn blue"><i class="icon-ok"></i>保存</button>
-
-													<input type="reset" class="btn">
-
-												</div>
-
-											</form>
-
-											<!-- END FORM-->  
+											<input type="password" name="user_pass" class="span6 m-wrap popovers" placeholder="请输入密码" />
 
 										</div>
 
 									</div>
 
-								</div>
+									<!-- <div class="control-group">
+
+										<label class="control-label">确认密码</label>
+
+										<div class="controls">
+
+											<input type="password" name="reuser_pass" class="span6 m-wrap popovers" placeholder="请确认输入密码" />
+
+										</div>
+
+									</div> -->
+
+									
+
+								
+
+									<div class="control-group">
+
+										<label class="control-label">Email </label>
+
+										<div class="controls">
+
+											<div class="input-prepend"><span class="add-on">@</span><input class="m-wrap " type="text" name="user_email" placeholder="请输入邮箱" />
+
+											</div>
+
+										</div>
+
+									</div>
+
+									<div class="control-group">
+
+										<label class="control-label">头像</label>
+
+										<div class="controls">
+
+											<input type="file" name="user_imgsrc" />
+
+										</div>
+									
+									</div>
+
+									
+
+									<div class="control-group">
+
+										<label class="control-label">地址</label>
+
+										<div class="controls">
+
+											<input type="text" name="user_address" class="span6 m-wrap popovers"placeholder="请输入地址" />
+
+										</div>
+									
+									</div>
+									
+									
+
+									<div class="form-actions">
+
+										<button type="submit" class="btn blue">提交</button>
+
+										<button type="button" class="btn">重置</button>                            
+
+									</div>
+
+								</form>
+
+								<!-- END FORM-->       
 
 							</div>
 
@@ -721,6 +820,7 @@
 
 				</div>
 
+				
 				<!-- END PAGE CONTENT-->         
 
 			</div>
@@ -739,11 +839,7 @@
 
 	<div class="footer">
 
-		<div class="footer-inner">
-
-			2013 &copy; Metronic by keenthemes.
-
-		</div>
+		
 
 		<div class="footer-tools">
 
@@ -791,15 +887,67 @@
 
 	<!-- END CORE PLUGINS -->
 
-	<script src="/discuz/Public/media/js/app.js"></script>     
+	<!-- BEGIN PAGE LEVEL PLUGINS -->
+
+	<script type="text/javascript" src="/discuz/Public/media/js/ckeditor.js"></script>  
+
+	<script type="text/javascript" src="/discuz/Public/media/js/bootstrap-fileupload.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/chosen.jquery.min.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/select2.min.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/wysihtml5-0.3.0.js"></script> 
+
+	<script type="text/javascript" src="/discuz/Public/media/js/bootstrap-wysihtml5.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/jquery.tagsinput.min.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/jquery.toggle.buttons.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/bootstrap-datepicker.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/bootstrap-datetimepicker.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/clockface.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/date.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/daterangepicker.js"></script> 
+
+	<script type="text/javascript" src="/discuz/Public/media/js/bootstrap-colorpicker.js"></script>  
+
+	<script type="text/javascript" src="/discuz/Public/media/js/bootstrap-timepicker.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/jquery.inputmask.bundle.min.js"></script>   
+
+	<script type="text/javascript" src="/discuz/Public/media/js/jquery.input-ip-address-control-1.0.min.js"></script>
+
+	<script type="text/javascript" src="/discuz/Public/media/js/jquery.multi-select.js"></script>   
+
+	<script src="/discuz/Public/media/js/bootstrap-modal.js" type="text/javascript" ></script>
+
+	<script src="/discuz/Public/media/js/bootstrap-modalmanager.js" type="text/javascript" ></script> 
+
+	<!-- END PAGE LEVEL PLUGINS -->
+
+	<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+	<script src="/discuz/Public/media/js/app.js"></script>
+
+	<script src="/discuz/Public/media/js/form-components.js"></script>     
+
+	<!-- END PAGE LEVEL SCRIPTS -->
 
 	<script>
 
-		jQuery(document).ready(function() {   
+		jQuery(document).ready(function() {       
 
 		   // initiate layout and plugins
 
 		   App.init();
+
+		   FormComponents.init();
 
 		});
 

@@ -650,13 +650,15 @@
 
 											<!-- BEGIN FORM-->
 
-											<form action="/discuz/index.php/Admin/Topic/insert" class="form-horizontal" method="post">
+											<form action="/discuz/index.php/Admin/Topic/update" class="form-horizontal" method="post">
 
 												<div class="control-group">
 
 													<label class="control-label">版主id</label>
 
 													<div class="controls">
+
+														<input type="hidden" name="topic_id" placeholder="" class="m-wrap small" value="<?php echo ($vo["topic_id"]); ?>" />
 
 														<input type="text" name="topic_masterid" placeholder="" class="m-wrap small" value="<?php echo ($vo["topic_masterid"]); ?>" />
 
