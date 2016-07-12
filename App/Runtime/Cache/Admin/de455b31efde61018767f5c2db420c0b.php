@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>Metronic | Data Tables - Managed Tables</title>
+	<title>版块管理</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -330,7 +330,7 @@
 
 						<li >
 
-							<a href="/discuz/index.php/Admin/Reply/index">
+							<a href="/discuz/index.php/Admin/Comment/index">
 
 							浏览评论信息</a>
 

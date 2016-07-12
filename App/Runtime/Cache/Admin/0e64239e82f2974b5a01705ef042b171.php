@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>Metronic | Form Stuff - Form Layouts</title>
+	<title>版块管理</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -672,7 +672,6 @@
 
 													<div class="controls">
 
-														<input type="hidden" name="topic_id" placeholder="" class="m-wrap large" />
 														<input type="text" name="topic_name" placeholder="" class="m-wrap large" />
 
 														<span class="help-inline"></span>

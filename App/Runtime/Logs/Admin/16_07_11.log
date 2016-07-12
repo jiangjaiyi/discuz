@@ -156,3 +156,6 @@ ERR: 1054:Unknown column 'id' in 'where clause'
 ERR: 1054:Unknown column 'id' in 'where clause'
  [ SQL语句 ] : SELECT * FROM `member` WHERE ( id=1 ) 
 
+[ 2016-07-11T22:21:57+08:00 ] ::1 /discuz/index.php/Admin/Topic/insert
+ERR: syntax error, unexpected ')'
+

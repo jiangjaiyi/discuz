@@ -351,7 +351,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						<li >
 
-							<a href="/discuz/index.php/Admin/Reply/index">
+							<a href="/discuz/index.php/Admin/Comment/index">
 
 							浏览评论信息</a>
 

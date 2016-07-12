@@ -10,7 +10,7 @@ class TopicController extends CommonController {
 		unset( $_POST[$model->getPk()]);
 		
 		if (false === $model->create()) {
-				$this->error(L('添加失败'));
+				$this->error($model->getError());
 		}
 		//保存当前数据对象
 		if ($result = $model->add()) { //保存成功
@@ -21,10 +21,10 @@ class TopicController extends CommonController {
 			}
 			
 			//成功提示
-			$this->success(L('添加成功'));
+			$this->success('添加成功');
 		} else {
 			//失败提示
-			$this->error(L('新增失败').$model->getLastSql());
+			$this->error('新增失败');
 		}
 		
 	}

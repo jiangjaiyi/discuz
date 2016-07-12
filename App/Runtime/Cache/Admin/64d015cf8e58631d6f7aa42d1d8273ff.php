@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 
@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>版块管理</title>
+	<title>帖子管理</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -22,33 +22,33 @@
 
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->
 
-	<link href="__PUBLIC__/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="__PUBLIC__/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="__PUBLIC__/media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="__PUBLIC__/media/css/style-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/style-metro.css" rel="stylesheet" type="text/css"/>
 
-	<link href="__PUBLIC__/media/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/style.css" rel="stylesheet" type="text/css"/>
 
-	<link href="__PUBLIC__/media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
 
-	<link href="__PUBLIC__/media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+	<link href="/discuz/Public/media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
 
-	<link href="__PUBLIC__/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 
 	<!-- END GLOBAL MANDATORY STYLES -->
 
 	<!-- BEGIN PAGE LEVEL STYLES -->
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/select2_metro.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/select2_metro.css" />
 
-	<link rel="stylesheet" href="__PUBLIC__/media/css/DT_bootstrap.css" />
+	<link rel="stylesheet" href="/discuz/Public/media/css/DT_bootstrap.css" />
 
 	<!-- END PAGE LEVEL STYLES -->
 
-	<link rel="shortcut icon" href="__PUBLIC__/media/image/favicon.ico" />
+	<link rel="shortcut icon" href="/discuz/Public/media/image/favicon.ico" />
 
 </head>
 
@@ -60,7 +60,70 @@
 
 	<!-- BEGIN HEADER -->
 
-	<include file="Index/head" />
+	
+	<div class="header navbar navbar-inverse navbar-fixed-top">
+
+		<!-- BEGIN TOP NAVIGATION BAR -->
+
+		<div class="navbar-inner">
+
+			<div class="container-fluid">
+
+				<!-- BEGIN LOGO -->
+
+				<a class="brand" href="index.html">
+
+				<img src="/discuz/Public/media/image/logo.png" alt="logo" />
+
+				</a>
+
+				<!-- END LOGO -->
+
+				<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+
+				<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+
+				<img src="/discuz/Public/media/image/menu-toggler.png" alt="" />
+
+				</a>          
+
+				<!-- END RESPONSIVE MENU TOGGLER -->            
+
+				<!-- BEGIN TOP NAVIGATION MENU -->              
+
+				<ul class="nav pull-right">
+
+					<!-- BEGIN USER LOGIN DROPDOWN -->
+
+					<li class="dropdown user">
+
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+						<img alt="" src="/discuz/Public/media/image/avatar1_small.jpg" />
+
+						<span class="username">Bob Nilson</span>
+
+						</a>
+
+							<li><a href="login.html"><i class="icon-key"></i> 退出</a></li>
+
+						</ul>
+
+					</li>
+
+					<!-- END USER LOGIN DROPDOWN -->
+
+				</ul>
+
+				<!-- END TOP NAVIGATION MENU --> 
+
+			</div>
+
+		</div>
+
+		<!-- END TOP NAVIGATION BAR -->
+
+	</div>
 
 	<!-- END HEADER -->
 
@@ -89,7 +152,7 @@
 
 				<li class="start">
 
-					<a href="__MODULE__/Index/index">
+					<a href="/discuz/index.php/Admin/Index/index">
 
 					<i class="icon-home"></i> 
 
@@ -118,7 +181,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Access/index">
+							<a href="/discuz/index.php/Admin/Access/index">
 
 							Basic Tables</a>
 
@@ -177,7 +240,7 @@
 
 						<li >
 
-							<a href="__MODULE__/User/index">
+							<a href="/discuz/index.php/Admin/User/index">
 
 							浏览员工信息</a>
 
@@ -185,7 +248,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Mumber/index">
+							<a href="/discuz/index.php/Admin/Mumber/index">
 
 							浏览用户信息</a>
 
@@ -196,7 +259,7 @@
 				</li>
 
 
-				<li class="active">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -212,9 +275,9 @@
 
 
 
-						<li class="active">
+						<li class="">
 
-							<a href="__MODULE__/Topic/index">
+							<a href="/discuz/index.php/Admin/Topic/index">
 
 							浏览版块信息</a>
 
@@ -223,7 +286,7 @@
 
 							<li >
 
-							<a href="__MODULE__/Topic/add">
+							<a href="/discuz/index.php/Admin/Topic/add">
 
 							新增版块</a>
 
@@ -235,7 +298,7 @@
 
 
 
-				<li class="">
+				<li class="active">
 
 					<a href="javascript:;">
 
@@ -251,23 +314,23 @@
 
 						<li >
 
-							<a href="__MODULE__/News/index">
+							<a href="/discuz/index.php/Admin/News/index">
 
 							浏览发帖信息</a>
 
 						</li>
 
-						<li >
+						<li class="active">
 
-							<a href="__MODULE__/Reply/index">
+							<a href="/discuz/index.php/Admin/Reply/index">
 
 							浏览回帖信息</a>
 
 						</li>
 
-						<li >
+						<li class="">
 
-							<a href="__MODULE__/Comment/index">
+							<a href="/discuz/index.php/Admin/Comment/index">
 
 							浏览评论信息</a>
 
@@ -294,7 +357,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Notice/index">
+							<a href="/discuz/index.php/Admin/Notice/index">
 
 							浏览公告信息</a>
 
@@ -302,7 +365,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Notice/add">
+							<a href="/discuz/index.php/Admin/Notice/add">
 
 							添加公告</a>
 
@@ -329,7 +392,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Ad/index">
+							<a href="/discuz/index.php/Admin/Ad/index">
 
 							浏览广告信息</a>
 
@@ -337,7 +400,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Ad/add">
+							<a href="/discuz/index.php/Admin/Ad/add">
 
 							新增广告信息</a>
 
@@ -363,7 +426,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Image/index">
+							<a href="/discuz/index.php/Admin/Image/index">
 
 							浏览相册</a>
 
@@ -371,7 +434,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Image/add">
+							<a href="/discuz/index.php/Admin/Image/add">
 
 							添加相册</a>
 
@@ -523,7 +586,7 @@
 
 						<h3 class="page-title">
 
-							浏览版块信息
+							浏览回帖信息
 
 						</h3>
 
@@ -533,7 +596,7 @@
 
 								<i class="icon-home"></i>
 
-								<a href="__MODULE__/Index/index">首页</a> 
+								<a href="/discuz/index.php/Admin/Index/index">首页</a> 
 
 								<i class="icon-angle-right"></i>
 
@@ -541,13 +604,13 @@
 
 							<li>
 
-								版块管理
+								帖子管理
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li>浏览版块信息</li>
+							<li>浏览回帖信息</li>
 
 						</ul>
 
@@ -575,7 +638,7 @@
 
 								<div class="actions">
 
-									<a href="__URL__/add" class="btn blue"><i class="icon-pencil"></i> Add</a>
+									<a href="/discuz/index.php/Admin/Reply/add" class="btn blue"><i class="icon-pencil"></i> Add</a>
 
 									<div class="btn-group">
 
@@ -613,45 +676,34 @@
 
 											<th style="width:8px;"><input type="checkbox" class="group-checkable" data-set="#sample_2 .checkboxes" /></th>
 
-											<th>版块ID</th>
+											<th>回帖ID</th>
 
-											<th class="hidden-480">版块名称</th>
+											<th class="hidden-480">版块id</th>
 
-											<th class="hidden-480">版主id</th>
+											<th class="hidden-480">用户id</th>
 
-											<th class="hidden-480">版块主题</th>
+											<th class="hidden-480">回帖内容</th>
 
-											<th class="hidden-480">回复数量</th>
-
-											<th class="hidden-480">点击率</th>
+											<th class="hidden-480">回帖时间</th>
 
 										</tr>
 
 									</thead>
 
 									<tbody>
-										<foreach name="list" item="vo">
-
-										<tr class="odd gradeX">
+										<?php if(is_array($list)): foreach($list as $key=>$vo): ?><tr class="odd gradeX">
 
 											<td><input type="checkbox" class="checkboxes" value="1" /></td>
 
-											<td>{$vo.topic_id}</td>
+											<td><?php echo ($vo["reply_id"]); ?></td>
+											<td><?php echo ($vo["reply_nid"]); ?></td>
+											<td><?php echo ($vo["reply_uid"]); ?></td>
+											<td><?php echo ($vo["reply_content"]); ?></td>
+											<td><?php echo ($vo["reply_date"]); ?></td>
 
-											<td>{$vo.topic_name}</td>
+											
 
-											<td>{$vo.topic_masterid}</td>
-
-											<td>{$vo.topic_profile}</td>
-
-											<td>{$vo.topic_count}</td>
-
-											<td>{$vo.topic_clickcount}</td>
-
-
-										</tr>
-
-										</foreach>
+										</tr><?php endforeach; endif; ?>
 										
 									</tbody>
 
@@ -709,49 +761,49 @@
 
 	<!-- BEGIN CORE PLUGINS -->
 
-	<script src="__PUBLIC__/media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<script src="/discuz/Public/media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
 
-	<script src="__PUBLIC__/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="/discuz/Public/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
 
 	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 
-	<script src="__PUBLIC__/media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
+	<script src="/discuz/Public/media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
 
-	<script src="__PUBLIC__/media/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/discuz/Public/media/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<!--[if lt IE 9]>
 
-	<script src="__PUBLIC__/media/js/excanvas.min.js"></script>
+	<script src="/discuz/Public/media/js/excanvas.min.js"></script>
 
-	<script src="__PUBLIC__/media/js/respond.min.js"></script>  
+	<script src="/discuz/Public/media/js/respond.min.js"></script>  
 
 	<![endif]-->   
 
-	<script src="__PUBLIC__/media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+	<script src="/discuz/Public/media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
 
-	<script src="__PUBLIC__/media/js/jquery.blockui.min.js" type="text/javascript"></script>  
+	<script src="/discuz/Public/media/js/jquery.blockui.min.js" type="text/javascript"></script>  
 
-	<script src="__PUBLIC__/media/js/jquery.cookie.min.js" type="text/javascript"></script>
+	<script src="/discuz/Public/media/js/jquery.cookie.min.js" type="text/javascript"></script>
 
-	<script src="__PUBLIC__/media/js/jquery.uniform.min.js" type="text/javascript" ></script>
+	<script src="/discuz/Public/media/js/jquery.uniform.min.js" type="text/javascript" ></script>
 
 	<!-- END CORE PLUGINS -->
 
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/select2.min.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/select2.min.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/jquery.dataTables.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/DT_bootstrap.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/DT_bootstrap.js"></script>
 
 	<!-- END PAGE LEVEL PLUGINS -->
 
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 
-	<script src="__PUBLIC__/media/js/app.js"></script>
+	<script src="/discuz/Public/media/js/app.js"></script>
 
-	<script src="__PUBLIC__/media/js/table-managed.js"></script>     
+	<script src="/discuz/Public/media/js/table-managed.js"></script>     
 
 	<script>
 
@@ -774,13 +826,13 @@
 			$('#edit').click(function(){
 				var data=0;
 				var data = $('span.checked').parent().parent().next().html();
-				$(this).attr('href','__MODULE__/Topic/edit/id/'+data);
+				$(this).attr('href','/discuz/index.php/Admin/Topic/edit/id/'+data);
 			});
 			
 			$('#del').click(function(){
 				var data =0;
 				var data = $('span.checked').first().parent().parent().next().html();
-				$(this).attr('href','__MODULE__/Topic/del/id/'+data);
+				$(this).attr('href','/discuz/index.php/Admin/Topic/del/id/'+data);
 			});
 			
 		
