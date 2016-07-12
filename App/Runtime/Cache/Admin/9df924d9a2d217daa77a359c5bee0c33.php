@@ -453,14 +453,6 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						</li>
 
-						<li >
-
-							<a href="/discuz/index.php/Admin/Image/add">
-
-							添加相册</a>
-
-						</li>
-
 					</ul>
 
 				</li>		
