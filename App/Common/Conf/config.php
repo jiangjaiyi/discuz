@@ -10,5 +10,5 @@ return array(
     'DB_PREFIX'             =>  '',    // 数据库表前缀
     'MODULE_ALLOW_LIST'     =>   array('Home','Admin'),
     'DEFAULT_MODULE'        =>  'Admin',
-    'SHOW_PAGE_TRACE'       =>   true, 
+    // 'SHOW_PAGE_TRACE'       =>   true, 
 );

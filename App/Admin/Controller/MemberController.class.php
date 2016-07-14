@@ -19,17 +19,13 @@ class MemberController extends CommonController {
 			$pk = $model->getPk();
 			$id = $_REQUEST['id'];
 			
-			if ($id !== 'undefined') {
+			$id = ltrim($id,'用户ID,');
+		
 				//批量删除
 				$condition = array($pk => array('in', explode(',', $id)));
-				if (false !== $model->where($condition)->delete()) {
-					$this->success(L('删除成功'));
-				} else {
-					$this->error(L('删除失败'));
-				}
-			} else {
-				$this->error('非法操作');
-			}
+				$model->where($condition)->delete();
+				$data['id'] = $id;
+				$this->ajaxReturn($data);
 		}
 	}
 

@@ -707,7 +707,7 @@
 
 													&nbsp;&nbsp;
 
-													<a id="del" href="/discuz/index.php/Admin/Image/del/image_id/<?php echo ($vo["image_id"]); ?>"  class="icon"><i class="icon-remove"></i></a>    
+													<a  info = "<?php echo ($vo["image_id"]); ?>" class="icon del"><i class="icon-remove"></i></a>    
 
 												</div>
 
@@ -885,27 +885,25 @@
 		});
 	});
 
-	// $('#del').click(function(){
-	// 	var id = $(this).attr('info');
-	// 	$.ajax({
-	// 				url:"/discuz/index.php/Admin/Image/del",
-	// 				type:"get",
+	$('.del').click(function(){
+		var id = $(this).attr('info');
+		$.ajax({
+					url:"/discuz/index.php/Admin/Image/Index/del",
+					type:"get",
 					
-	// 				async:true,
-	// 				data:{image_id:id},
-	// 				dataType:"text",
-	// 				success:function(data){
+					async:true,
+					data:{image_id:id},
+					dataType:"text",
+					success:function(data){
 
-	// 					eval("var ob="+data);
-	// 					$('a[info='+ob.id+']').parent().parent().remove();
-	// 				},
-	// 				error:function(){
-	// 					alert("ajax请求失败");
-	// 				}
+						alert("ajax成功");;
+					},
+					error:function(){
+						alert("ajax请求失败");
+					}
 
-	// 			});
-	// });
-	
+				});
+	});
 
 </script>
 </body>

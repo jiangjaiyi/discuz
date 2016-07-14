@@ -586,49 +586,26 @@
 
 								<div class="row-fluid">
 
-									<div class="span4">
+									<div class="clearfix space5"></div>
 
-										<h4>Browsing Category 1</h4>
-
-									</div>
+											<a  id="upload" class="btn pull-left green"><i class="icon-plus"></i> Upload</a>
 
 									<div class="span8">
 
-										<div class="pull-right">
+										<div class="pull-left">
 
-											<select data-placeholder="Select Category" class="chosen" tabindex="-1" id="inputCategory">
-
-												<option value="0"></option>
-
-												<option value="1">All</option>
-
-												<option value="1">Category 1</option>
-
-												<option value="1">Category 2</option>
-
-												<option value="1">Category 3</option>
-
-												<option value="1">Category 4</option>
-
-											</select>
-
-											<select data-placeholder="Sort By" class="chosen input-small" tabindex="-1" id="inputSort">
+											<select data-placeholder="排序" class="chosen input-small" tabindex="-1" id="inputSort">
 
 												<option value="0"></option>
 
-												<option value="1">Date</option>
+												<option value="1">日期</option>
 
-												<option value="1">Author</option>
+												<option value="1">作者</option>
 
-												<option value="1">Title</option>
-
-												<option value="1">Hits</option>
+												<option value="1">标题</option>
 
 											</select>
-
-											<div class="clearfix space5"></div>
-
-											<a href="" class="btn pull-right green"><i class="icon-plus"></i> Upload</a>
+	
 
 										</div>
 
@@ -669,20 +646,18 @@
 
 												<div class="details">
 
-													<a href="#" class="icon"><i class="icon-paper-clip"></i></a>
+													<i>{$vo.image_src}</i>
 
-													<a href="#" class="icon"><i class="icon-link"></i></a>
+													&nbsp;&nbsp;
 
-													<a href="#" class="icon"><i class="icon-pencil"></i></a>
-
-													<a href="#" class="icon"><i class="icon-remove"></i></a>    
+													<a id="del" href="__URL__/del/image_id/{$vo.image_id}"  class="icon"><i class="icon-remove"></i></a>    
 
 												</div>
 
 											</div>
 
 										</div>
-
+										
 										
 									<if condition="($k+1)%4 == 0  ">
 										
@@ -842,7 +817,47 @@
 
 	<!-- END JAVASCRIPTS -->
 
-<script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-37564768-1']);  _gaq.push(['_setDomainName', 'keenthemes.com']);  _gaq.push(['_setAllowLinker', true]);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })();</script></body>
+<script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-37564768-1']);  _gaq.push(['_setDomainName', 'keenthemes.com']);  _gaq.push(['_setAllowLinker', true]);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })();</script>
+	
+	
+<form action="__URL__/upload" enctype="multipart/form-data" method="post" >
+
+	<input style="display:none;" type="file" name="image[]" multiple />
+	<input style="display:none;" type="submit" name="">
+</form>
+	
+	
+<script type="text/javascript">
+	$('#upload').click(function(){
+		$(':file').trigger('click').change(function(){
+			$(':submit').click();
+		});
+	});
+
+	// $('#del').click(function(){
+	// 	var id = $(this).attr('info');
+	// 	$.ajax({
+	// 				url:"__URL__/del",
+	// 				type:"get",
+					
+	// 				async:true,
+	// 				data:{image_id:id},
+	// 				dataType:"text",
+	// 				success:function(data){
+
+	// 					eval("var ob="+data);
+	// 					$('a[info='+ob.id+']').parent().parent().remove();
+	// 				},
+	// 				error:function(){
+	// 					alert("ajax请求失败");
+	// 				}
+
+	// 			});
+	// });
+	
+
+</script>
+</body>
 
 <!-- END BODY -->
 

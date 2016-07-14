@@ -869,11 +869,30 @@
 			});
 			
 			$('#del').click(function(){
-				var data =0;
-				var data = $('span.checked').first().parent().parent().next().html();
+				var str='';
+				//alert($('span.checked').length);
+				$('span.checked').each(function(){
+					str += $(this).parent().parent().next().html()+",";
+				});
 				
-				// alert(data);
-				$(this).attr('href','/discuz/index.php/Admin/Member/del/id/'+data);
+				//alert(data);
+				//$(this).attr('href','/discuz/index.php/Admin/Member/del/id/'+data);
+				$.ajax({
+					url:"/discuz/index.php/Admin/Member/del",
+					type:"get",
+					data:{id:str},
+					dataType:"text",
+					success:function(data){
+						eval("var ob="+data);
+						list = [];
+						list = ob.id.split(',');
+						for(var i=0;i<list.length-1;i++){
+							
+							$("td:contains('"+list[i]+"')").parent().remove();
+						}
+					}
+
+				});
 			});
 			$('#ban').click(function(){
 				var data =0;
