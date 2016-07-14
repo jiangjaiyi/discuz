@@ -120,47 +120,31 @@
 						<li >
 
 							<a href="__MODULE__/Access/index">
+								浏览员工信息
+							</a>
 
-							Basic Tables</a>
+						</li>
+
+					<li >
+
+							<a href="__MODULE__/Role/index">
+
+								浏览角色信息
+							</a>
 
 						</li>
 
 						<li >
 
-							<a href="table_responsive.html">
+							<a href="__MODULE__/Node/index">
 
-							Responsive Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="table_managed.html">
-
-							Managed Tables</a>
+								浏览节点信息
+							</a>
 
 						</li>
-
-						<li >
-
-							<a href="table_editable.html">
-
-							Editable Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="table_advanced.html">
-
-							Advanced Tables</a>
-
-						</li>
-
 					</ul>
 
 				</li>
-
 				
 				<li class="active">
 
@@ -594,7 +578,6 @@
 
 											<li><a id='edit' href="#"><i class="icon-pencil"></i> Edit</a></li>
 
-											<!-- <li><a id= 'del' href="__MODULE__/User/del/id/{$Think.config.TMPL_L_DELIM}item_id{$Think.config.TMPL_R_DELIM}"><i class="icon-trash"></i> Delete</a></li> -->
 											<li><a id= 'del' href="#"><i class="icon-trash"></i> Delete</a></li>
 
 											
@@ -625,7 +608,7 @@
 											<th class="hidden-480">Email</th>
 											<th>注册时间</th>
 											<th class="hidden-480">用户地址</th>
-											<th class="hidden-480">用户角色</th>
+										
 											
 
 										</tr>
@@ -654,8 +637,7 @@
 
 											<td>{$vo.user_address}</td>
 
-											<td>{$vo.user_roleid}</td>
-
+										
 											
 
 										</tr>

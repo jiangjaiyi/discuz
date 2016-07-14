@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>添加员工</title>
+	<title>节点操作</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -84,9 +84,7 @@
 
 <body class="page-header-fixed">
 
-	<!-- BEGIN HEADER -->
-
-	<include file="Index/head" />
+<include file="Index/head" />
 
 
 	<!-- END HEADER -->
@@ -130,7 +128,7 @@
 				</li>
 
 
-			<li class="">
+				<li class="active">
 
 					<a href="javascript:;">
 
@@ -141,7 +139,8 @@
 					<span class="arrow "></span>
 
 					</a>
-				<ul class="sub-menu">
+
+					<ul class="sub-menu">
 
 						<li >
 
@@ -149,9 +148,9 @@
 								浏览员工信息
 							</a>
 
-						</li>
+						</li >
 
-						<li >
+							<li class="active">
 
 							<a href="__MODULE__/Role/index">
 
@@ -169,9 +168,11 @@
 
 						</li>
 					</ul>
+
 				</li>
+
 				
-				<li class="active">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -337,7 +338,7 @@
 
 					<ul class="sub-menu">
 
-						<li >
+						<li class="">
 
 							<a href="__MODULE__/Ad/index">
 
@@ -345,7 +346,7 @@
 
 						</li>
 
-						<li >
+						<li class="">
 
 							<a href="__MODULE__/Ad/add">
 
@@ -401,10 +402,8 @@
 
 		</div>
 
-		<!-- END SIDEBAR -->
 
 		<!-- BEGIN PAGE -->  
-
 		<div class="page-content">
 
 			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
@@ -533,7 +532,7 @@
 
 						<h3 class="page-title">
 
-							添加信息
+							浏览员工信息
 
 						</h3>
 
@@ -551,16 +550,13 @@
 
 							<li>
 
-								成员管理
+								权限管理
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li>浏览员工信息
-								<i class="icon-angle-right"></i>
-							</li>
-							<li>添加信息</li>
+							<li>分配节点</li>
 
 						</ul>
 
@@ -584,16 +580,11 @@
 
 							<div class="portlet-title">
 
-								
-
 								<div class="tools">
 
 									<a href="javascript:;" class="collapse"></a>
 
 									
-
-									
-
 									<a href="javascript:;" class="remove"></a>
 
 								</div>
@@ -604,109 +595,33 @@
 
 								<!-- BEGIN FORM-->
 
-								<form method="post" action="__URL__/insert" class="form-horizontal" enctype="multipart/form-data">
-
-									<div class="control-group">
-
-										<label class="control-label">用户名</label>
-
-										<div class="controls">
-
-											<input type="text" name="user_name" class="span6 m-wrap popovers" placeholder="请输入用户名" />
-
-										</div>
-									
-									</div>
-									
-									<div class="control-group">
-
-										<label class="control-label">性别</label>
-
-										<div class="controls">
-
-											<label class="radio">
-
-											<input type="radio" name="user_sex" value="0" checked />
-
-											男
-
-											</label>
-
-											<label class="radio">
-
-											<input type="radio" name="user_sex" value="1" />
-
-											女
-
-											</label>  
-
-											
-
-										</div>
-
-									</div>
-									
-
-									<div class="control-group">
-
-										<label class="control-label">密码</label>
-
-										<div class="controls">
-
-											<input type="password" name="user_pass" class="span6 m-wrap popovers" placeholder="请输入密码" />
-
-										</div>
-
-									</div>
-								
-
-									<div class="control-group">
-
-										<label class="control-label">Email </label>
-
-										<div class="controls">
-
-											<div class="input-prepend"><span class="add-on">@</span><input class="m-wrap " type="text" name="user_email" placeholder="请输入邮箱" />
-
-											</div>
-
-										</div>
-
-									</div>
-
-									<div class="control-group">
-
-										<label class="control-label">头像</label>
-
-										<div class="controls">
-
-											<input type="file" name="user_imgsrc" />
-
-										</div>
-									
-									</div>
+								<form method="post" action="__URL__/savenode" class="form-horizontal">
 
 									
 
 									<div class="control-group">
 
-										<label class="control-label">地址</label>
+										<label class="control-label">【{$role.role_name}】的节点</label>
 
 										<div class="controls">
-
-											<input type="text" name="user_address" class="span6 m-wrap popovers"placeholder="请输入地址" />
-
+											<div class="row-fluid">
+												<input type="hidden" name="role_id" value="{$role.role_id}"/>
+												<volist name="nodelist" id="vo">
+													<label class="checkbox line">
+														
+													<input type="checkbox" name="nid[]" <if condition="in_array($vo['node_id'],$node)">checked</if> value="{$vo.node_id}" />{$vo.node_name}
+													</label>
+												</volist>
 										</div>
-									
+
 									</div>
-									
-									
+
 
 									<div class="form-actions">
 
 										<button type="submit" class="btn blue">提交</button>
 
-										<button type="reset" class="btn">重置</button>                            
+										<input type="reset" class="btn">                            
 
 									</div>
 
@@ -725,8 +640,6 @@
 				</div>
 
 				
-				<!-- END PAGE CONTENT-->         
-
 			</div>
 
 			<!-- END PAGE CONTAINER-->
@@ -743,7 +656,11 @@
 
 	<div class="footer">
 
-		
+		<div class="footer-inner">
+
+			2013 &copy; Metronic by keenthemes.
+
+		</div>
 
 		<div class="footer-tools">
 

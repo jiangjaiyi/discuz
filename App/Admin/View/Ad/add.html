@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>添加员工</title>
+	<title>添加广告</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -130,7 +130,7 @@
 				</li>
 
 
-			<li class="">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -141,7 +141,8 @@
 					<span class="arrow "></span>
 
 					</a>
-				<ul class="sub-menu">
+
+					<ul class="sub-menu">
 
 						<li >
 
@@ -151,7 +152,7 @@
 
 						</li>
 
-						<li >
+							<li >
 
 							<a href="__MODULE__/Role/index">
 
@@ -169,9 +170,11 @@
 
 						</li>
 					</ul>
+
 				</li>
+
 				
-				<li class="active">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -323,7 +326,7 @@
 				</li>
 
 
-				<li class="">
+				<li class="active">
 
 					<a href="javascript:;">
 
@@ -337,7 +340,7 @@
 
 					<ul class="sub-menu">
 
-						<li >
+						<li class="">
 
 							<a href="__MODULE__/Ad/index">
 
@@ -345,7 +348,7 @@
 
 						</li>
 
-						<li >
+						<li class="active">
 
 							<a href="__MODULE__/Ad/add">
 
@@ -533,7 +536,7 @@
 
 						<h3 class="page-title">
 
-							添加信息
+							添加广告
 
 						</h3>
 
@@ -551,16 +554,16 @@
 
 							<li>
 
-								成员管理
+								广告管理
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li>浏览员工信息
+							<li>浏览广告信息
 								<i class="icon-angle-right"></i>
 							</li>
-							<li>添加信息</li>
+							<li>添加广告</li>
 
 						</ul>
 
@@ -608,79 +611,52 @@
 
 									<div class="control-group">
 
-										<label class="control-label">用户名</label>
+										<label class="control-label">标题</label>
 
 										<div class="controls">
 
-											<input type="text" name="user_name" class="span6 m-wrap popovers" placeholder="请输入用户名" />
+											<input type="text" name="ad_title" class="span6 m-wrap popovers" placeholder="请写入标题" />
 
 										</div>
 									
 									</div>
 									
+
 									<div class="control-group">
 
-										<label class="control-label">性别</label>
+										<label class="control-label">链接</label>
 
 										<div class="controls">
 
-											<label class="radio">
-
-											<input type="radio" name="user_sex" value="0" checked />
-
-											男
-
-											</label>
-
-											<label class="radio">
-
-											<input type="radio" name="user_sex" value="1" />
-
-											女
-
-											</label>  
-
-											
+											<input type="text" name="ad_link" class="span6 m-wrap popovers" placeholder="请写入链接" />
 
 										</div>
 
 									</div>
-									
 
 									<div class="control-group">
 
-										<label class="control-label">密码</label>
+										<label class="control-label">图片</label>
 
 										<div class="controls">
 
-											<input type="password" name="user_pass" class="span6 m-wrap popovers" placeholder="请输入密码" />
+											<input type="file" name="ad_imgsrc" />
 
 										</div>
-
+									
 									</div>
 								
 
-									<div class="control-group">
-
-										<label class="control-label">Email </label>
-
-										<div class="controls">
-
-											<div class="input-prepend"><span class="add-on">@</span><input class="m-wrap " type="text" name="user_email" placeholder="请输入邮箱" />
-
-											</div>
-
-										</div>
-
-									</div>
+									
 
 									<div class="control-group">
 
-										<label class="control-label">头像</label>
+										<label class="control-label">广告内容</label>
 
 										<div class="controls">
 
-											<input type="file" name="user_imgsrc" />
+											<textarea name="ad_content" class="large m-wrap" rows="4" placeholder="请输入公告内容"></textarea>
+
 
 										</div>
 									
@@ -690,11 +666,11 @@
 
 									<div class="control-group">
 
-										<label class="control-label">地址</label>
+										<label class="control-label">失效时间</label>
 
 										<div class="controls">
 
-											<input type="text" name="user_address" class="span6 m-wrap popovers"placeholder="请输入地址" />
+											<input type="text" name="ad_time" class="span6 m-wrap popovers"placeholder="请输入时间" />
 
 										</div>
 									

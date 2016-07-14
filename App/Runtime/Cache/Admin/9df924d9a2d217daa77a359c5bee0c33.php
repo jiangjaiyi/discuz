@@ -203,43 +203,30 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						<li >
 
 							<a href="/discuz/index.php/Admin/Access/index">
+								浏览员工信息
+							</a>
 
-							Basic Tables</a>
+						</li>
+
+					
+
+							<li >
+
+							<a href="/discuz/index.php/Admin/Role/index">
+
+								浏览角色信息
+							</a>
 
 						</li>
 
 						<li >
 
-							<a href="table_responsive.html">
+							<a href="/discuz/index.php/Admin/Node/index">
 
-							Responsive Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="table_managed.html">
-
-							Managed Tables</a>
+								浏览节点信息
+							</a>
 
 						</li>
-
-						<li >
-
-							<a href="table_editable.html">
-
-							Editable Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="table_advanced.html">
-
-							Advanced Tables</a>
-
-						</li>
-
 					</ul>
 
 				</li>
@@ -351,7 +338,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						<li >
 
-							<a href="/discuz/index.php/Admin/Comment/index">
+							<a href="/discuz/index.php/Admin/Reply/index">
 
 							浏览评论信息</a>
 
@@ -450,6 +437,14 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 							<a href="/discuz/index.php/Admin/Image/index">
 
 							浏览相册</a>
+
+						</li>
+
+						<li >
+
+							<a href="/discuz/index.php/Admin/Image/add">
+
+							添加相册</a>
 
 						</li>
 

@@ -8,6 +8,7 @@ namespace Admin\Model;
 		
 		 protected $_validate = array(
 		 	 array('user_name','require','用户名称不能为空！'), //用户名不能为空
+		 	  array('user_name','','用户称已经存在！',0,'unique',1), 
 		 	  array('user_pass','require','密码不能为空！'),
 		 	 array('user_email','require','Email不能为空！'), //用户名不能为空
 		 	 array('user_address','require','地址不能为空！') //用户名不能为空

@@ -166,7 +166,7 @@
 				</li>
 
 
-				<li class="">
+				<li class="active">
 
 					<a href="javascript:;">
 
@@ -180,7 +180,7 @@
 
 					<ul class="sub-menu">
 
-						<li >
+						<li class="active">
 
 							<a href="/discuz/index.php/Admin/Access/index">
 								浏览员工信息
@@ -188,7 +188,7 @@
 
 						</li>
 
-					<li >
+						<li >
 
 							<a href="/discuz/index.php/Admin/Role/index">
 
@@ -209,7 +209,7 @@
 
 				</li>
 				
-				<li class="active">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -589,7 +589,7 @@
 
 							<li>
 
-								<a href="javascript:;">成员管理</a>
+								<a href="javascript:;">权限管理</a>
 
 								<i class="icon-angle-right"></i>
 
@@ -623,33 +623,7 @@
 
 								<div class="caption"><i class="icon-user"></i>Table</div>
 
-								<div class="actions">
-
-									<a href="/discuz/index.php/Admin/User/add" class="btn blue"><i class="icon-pencil"></i> Add</a>
-
-									<div class="btn-group">
-
-										<a class="btn green" href="#" data-toggle="dropdown">
-
-										<i class="icon-cogs"></i> Tools
-
-										<i class="icon-angle-down"></i>
-
-										</a>
-
-										<ul class="dropdown-menu pull-right">
-
-											<li><a id='edit' href="#"><i class="icon-pencil"></i> Edit</a></li>
-
-											<li><a id= 'del' href="#"><i class="icon-trash"></i> Delete</a></li>
-
-											
-
-										</ul>
-
-									</div>
-
-								</div>
+								
 
 							</div>
 
@@ -671,7 +645,8 @@
 											<th class="hidden-480">Email</th>
 											<th>注册时间</th>
 											<th class="hidden-480">用户地址</th>
-										
+											<th class="hidden-480">用户角色</th>
+											<th class="hidden-480">操作</th>
 											
 
 										</tr>
@@ -679,7 +654,7 @@
 									</thead>
 
 									<tbody>
-
+										
 										<?php if(is_array($list)): foreach($list as $key=>$vo): ?><tr class="odd gradeX"  >
 											<td><input type="checkbox" class="checkboxes" value="<?php echo ($vo["user_id"]); ?>" /></td>
 
@@ -699,7 +674,8 @@
 
 											<td><?php echo ($vo["user_address"]); ?></td>
 
-										
+											<td><?php echo ($vo["user_roles"]); ?></td>
+											<td ><span class="label label-success"><a href="/discuz/index.php/Admin/Access/rolelist/uid/<?php echo ($vo["user_id"]); ?>">角色分配</a></span></td>
 											
 
 										</tr><?php endforeach; endif; ?>
@@ -822,27 +798,6 @@
 
 <script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-37564768-1']);  _gaq.push(['_setDomainName', 'keenthemes.com']);  _gaq.push(['_setAllowLinker', true]);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })();</script></body>
 
-
-<script type="text/javascript">
-		
-			
-			$('#edit').click(function(){
-				var data=0;
-				var data = $('span.checked').parent().parent().next().html();
-				$(this).attr('href','/discuz/index.php/Admin/User/edit/id/'+data);
-			});
-			
-			$('#del').click(function(){
-				var data =0;
-				var data = $('span.checked').first().parent().parent().next().html();
-				
-				// alert(data);
-				$(this).attr('href','/discuz/index.php/Admin/User/del/id/'+data);
-			});
-			
-		
-
-	</script>
 
 <!-- END BODY -->
 

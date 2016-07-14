@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>添加员工</title>
+	<title>添加角色</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -130,7 +130,7 @@
 				</li>
 
 
-			<li class="">
+			<li class="active">
 
 					<a href="javascript:;">
 
@@ -151,7 +151,7 @@
 
 						</li>
 
-						<li >
+						<li class="active">
 
 							<a href="__MODULE__/Role/index">
 
@@ -171,7 +171,7 @@
 					</ul>
 				</li>
 				
-				<li class="active">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -185,7 +185,7 @@
 
 					<ul class="sub-menu">
 
-						<li class="active">
+						<li class="">
 
 							<a href="__MODULE__/User/index">
 
@@ -551,13 +551,13 @@
 
 							<li>
 
-								成员管理
+								权限管理
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li>浏览员工信息
+							<li>浏览角色信息
 								<i class="icon-angle-right"></i>
 							</li>
 							<li>添加信息</li>
@@ -604,15 +604,15 @@
 
 								<!-- BEGIN FORM-->
 
-								<form method="post" action="__URL__/insert" class="form-horizontal" enctype="multipart/form-data">
+								<form method="post" action="__URL__/insert" class="form-horizontal" >
 
 									<div class="control-group">
 
-										<label class="control-label">用户名</label>
+										<label class="control-label">角色名</label>
 
 										<div class="controls">
 
-											<input type="text" name="user_name" class="span6 m-wrap popovers" placeholder="请输入用户名" />
+											<input type="text" name="role_name" class="span6 m-wrap popovers" placeholder="请输入角色" />
 
 										</div>
 									
@@ -620,23 +620,23 @@
 									
 									<div class="control-group">
 
-										<label class="control-label">性别</label>
+										<label class="control-label">状态</label>
 
 										<div class="controls">
 
 											<label class="radio">
 
-											<input type="radio" name="user_sex" value="0" checked />
+											<input type="radio" name="role_state" value="0" checked />
 
-											男
+											禁用
 
 											</label>
 
 											<label class="radio">
 
-											<input type="radio" name="user_sex" value="1" />
+											<input type="radio" name="role_state" value="1" />
 
-											女
+											启用
 
 											</label>  
 
@@ -645,63 +645,7 @@
 										</div>
 
 									</div>
-									
-
-									<div class="control-group">
-
-										<label class="control-label">密码</label>
-
-										<div class="controls">
-
-											<input type="password" name="user_pass" class="span6 m-wrap popovers" placeholder="请输入密码" />
-
-										</div>
-
-									</div>
-								
-
-									<div class="control-group">
-
-										<label class="control-label">Email </label>
-
-										<div class="controls">
-
-											<div class="input-prepend"><span class="add-on">@</span><input class="m-wrap " type="text" name="user_email" placeholder="请输入邮箱" />
-
-											</div>
-
-										</div>
-
-									</div>
-
-									<div class="control-group">
-
-										<label class="control-label">头像</label>
-
-										<div class="controls">
-
-											<input type="file" name="user_imgsrc" />
-
-										</div>
-									
-									</div>
-
-									
-
-									<div class="control-group">
-
-										<label class="control-label">地址</label>
-
-										<div class="controls">
-
-											<input type="text" name="user_address" class="span6 m-wrap popovers"placeholder="请输入地址" />
-
-										</div>
-									
-									</div>
-									
-									
-
+		
 									<div class="form-actions">
 
 										<button type="submit" class="btn blue">提交</button>

@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>浏览员工信息</title>
+	<title>浏览角色信息</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -166,7 +166,7 @@
 				</li>
 
 
-				<li class="">
+				<li class="active">
 
 					<a href="javascript:;">
 
@@ -188,7 +188,7 @@
 
 						</li>
 
-					<li >
+						<li class="active">
 
 							<a href="/discuz/index.php/Admin/Role/index">
 
@@ -209,7 +209,7 @@
 
 				</li>
 				
-				<li class="active">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -589,13 +589,13 @@
 
 							<li>
 
-								<a href="javascript:;">成员管理</a>
+								<a href="javascript:;">权限管理</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li>浏览员工信息</li>
+							<li>浏览角色信息</li>
 
 						</ul>
 
@@ -625,7 +625,7 @@
 
 								<div class="actions">
 
-									<a href="/discuz/index.php/Admin/User/add" class="btn blue"><i class="icon-pencil"></i> Add</a>
+									<a href="/discuz/index.php/Admin/Role/add" class="btn blue"><i class="icon-pencil"></i> Add</a>
 
 									<div class="btn-group">
 
@@ -663,43 +663,30 @@
 
 											<th style="width:8px;"><input type="checkbox" class="group-checkable" data-set="#sample_2 .checkboxes" /></th>
 
-											<th>用户ID</th>
-											<th>用户名</th>
-											<th>性别</th>
-											<th>密码</th>
-
-											<th class="hidden-480">Email</th>
-											<th>注册时间</th>
-											<th class="hidden-480">用户地址</th>
-										
-											
+											<th>角色ID</th>
+											<th>角色名</th>
+											<th>角色说明</th>
+											<th>状态</th>
+											<th>操作</th>
 
 										</tr>
 
 									</thead>
 
 									<tbody>
-
+										
 										<?php if(is_array($list)): foreach($list as $key=>$vo): ?><tr class="odd gradeX"  >
-											<td><input type="checkbox" class="checkboxes" value="<?php echo ($vo["user_id"]); ?>" /></td>
+											<td><input type="checkbox" class="checkboxes" value="<?php echo ($vo["role_id"]); ?>" /></td>
 
-											<td><?php echo ($vo["user_id"]); ?></td>
+											<td><?php echo ($vo["role_id"]); ?></td>
 
 											
 
-											<td><?php echo ($vo["user_name"]); ?></td>
-											<td><?php if($vo["user_sex"] == 0 ): ?>男   <?php else: ?> 女<?php endif; ?></td>
+											<td><?php echo ($vo["role_name"]); ?></td>
+											<td><?php echo ($vo["role_remark"]); ?></td>
+											<td><?php if($vo["role_state"] == 1 ): ?>启动   <?php else: ?> 禁用<?php endif; ?></td>
 										
-
-											<td><?php echo ($vo["user_pass"]); ?></td>
-
-											<td class="hidden-480"><a href="mailto:shuxer@gmail.com"><?php echo ($vo["user_email"]); ?></a></td>
-
-											<td><?php echo ($vo["user_addtime"]); ?></td>
-
-											<td><?php echo ($vo["user_address"]); ?></td>
-
-										
+											<td ><span class="label label-success"><a href="/discuz/index.php/Admin/Role/nodelist/rid/<?php echo ($vo["role_id"]); ?>">分配操作节点</a></span></td>
 											
 
 										</tr><?php endforeach; endif; ?>
@@ -823,13 +810,14 @@
 <script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-37564768-1']);  _gaq.push(['_setDomainName', 'keenthemes.com']);  _gaq.push(['_setAllowLinker', true]);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })();</script></body>
 
 
+
 <script type="text/javascript">
 		
 			
 			$('#edit').click(function(){
 				var data=0;
 				var data = $('span.checked').parent().parent().next().html();
-				$(this).attr('href','/discuz/index.php/Admin/User/edit/id/'+data);
+				$(this).attr('href','/discuz/index.php/Admin/Role/edit/id/'+data);
 			});
 			
 			$('#del').click(function(){
@@ -837,12 +825,13 @@
 				var data = $('span.checked').first().parent().parent().next().html();
 				
 				// alert(data);
-				$(this).attr('href','/discuz/index.php/Admin/User/del/id/'+data);
+				$(this).attr('href','/discuz/index.php/Admin/Role/del/id/'+data);
 			});
 			
 		
 
 	</script>
+
 
 <!-- END BODY -->
 

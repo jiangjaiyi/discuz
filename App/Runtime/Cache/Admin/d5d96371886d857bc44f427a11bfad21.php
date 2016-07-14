@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 
@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>添加员工</title>
+	<title>添加广告</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -22,59 +22,59 @@
 
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->
 
-	<link href="__PUBLIC__/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="__PUBLIC__/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="__PUBLIC__/media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="__PUBLIC__/media/css/style-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/style-metro.css" rel="stylesheet" type="text/css"/>
 
-	<link href="__PUBLIC__/media/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/style.css" rel="stylesheet" type="text/css"/>
 
-	<link href="__PUBLIC__/media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
 
-	<link href="__PUBLIC__/media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+	<link href="/discuz/Public/media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
 
-	<link href="__PUBLIC__/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 
 	<!-- END GLOBAL MANDATORY STYLES -->
 
 	<!-- BEGIN PAGE LEVEL STYLES -->
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/bootstrap-fileupload.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/bootstrap-fileupload.css" />
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/jquery.gritter.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/jquery.gritter.css" />
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/chosen.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/chosen.css" />
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/select2_metro.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/select2_metro.css" />
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/jquery.tagsinput.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/jquery.tagsinput.css" />
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/clockface.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/clockface.css" />
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/bootstrap-wysihtml5.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/bootstrap-wysihtml5.css" />
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/datepicker.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/datepicker.css" />
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/timepicker.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/timepicker.css" />
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/colorpicker.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/colorpicker.css" />
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/bootstrap-toggle-buttons.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/bootstrap-toggle-buttons.css" />
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/daterangepicker.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/daterangepicker.css" />
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/datetimepicker.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/datetimepicker.css" />
 
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/media/css/multi-select-metro.css" />
+	<link rel="stylesheet" type="text/css" href="/discuz/Public/media/css/multi-select-metro.css" />
 
-	<link href="__PUBLIC__/media/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+	<link href="/discuz/Public/media/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
 
 	<!-- END PAGE LEVEL STYLES -->
 
-	<link rel="shortcut icon" href="__PUBLIC__/media/image/favicon.ico" />
+	<link rel="shortcut icon" href="/discuz/Public/media/image/favicon.ico" />
 
 </head>
 
@@ -86,7 +86,70 @@
 
 	<!-- BEGIN HEADER -->
 
-	<include file="Index/head" />
+	
+	<div class="header navbar navbar-inverse navbar-fixed-top">
+
+		<!-- BEGIN TOP NAVIGATION BAR -->
+
+		<div class="navbar-inner">
+
+			<div class="container-fluid">
+
+				<!-- BEGIN LOGO -->
+
+				<a class="brand" href="index.html">
+
+				<img src="/discuz/Public/media/image/logo.png" alt="logo" />
+
+				</a>
+
+				<!-- END LOGO -->
+
+				<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+
+				<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+
+				<img src="/discuz/Public/media/image/menu-toggler.png" alt="" />
+
+				</a>          
+
+				<!-- END RESPONSIVE MENU TOGGLER -->            
+
+				<!-- BEGIN TOP NAVIGATION MENU -->              
+
+				<ul class="nav pull-right">
+
+					<!-- BEGIN USER LOGIN DROPDOWN -->
+
+					<li class="dropdown user">
+
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+						<img alt="" src="/discuz/Public/media/image/avatar1_small.jpg" />
+
+						<span class="username">Bob Nilson</span>
+
+						</a>
+
+							<li><a href="login.html"><i class="icon-key"></i> 退出</a></li>
+
+						</ul>
+
+					</li>
+
+					<!-- END USER LOGIN DROPDOWN -->
+
+				</ul>
+
+				<!-- END TOP NAVIGATION MENU --> 
+
+			</div>
+
+		</div>
+
+		<!-- END TOP NAVIGATION BAR -->
+
+	</div>
 
 
 	<!-- END HEADER -->
@@ -117,7 +180,7 @@
 
 				<li class="start  ">
 
-					<a href="__MODULE__/Index/index">
+					<a href="/discuz/index.php/Admin/Index/index">
 
 					<i class="icon-home"></i> 
 
@@ -130,7 +193,7 @@
 				</li>
 
 
-			<li class="">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -141,19 +204,20 @@
 					<span class="arrow "></span>
 
 					</a>
-				<ul class="sub-menu">
+
+					<ul class="sub-menu">
 
 						<li >
 
-							<a href="__MODULE__/Access/index">
+							<a href="/discuz/index.php/Admin/Access/index">
 								浏览员工信息
 							</a>
 
 						</li>
 
-						<li >
+							<li >
 
-							<a href="__MODULE__/Role/index">
+							<a href="/discuz/index.php/Admin/Role/index">
 
 								浏览角色信息
 							</a>
@@ -162,16 +226,18 @@
 
 						<li >
 
-							<a href="__MODULE__/Node/index">
+							<a href="/discuz/index.php/Admin/Node/index">
 
 								浏览节点信息
 							</a>
 
 						</li>
 					</ul>
+
 				</li>
+
 				
-				<li class="active">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -187,7 +253,7 @@
 
 						<li class="active">
 
-							<a href="__MODULE__/User/index">
+							<a href="/discuz/index.php/Admin/User/index">
 
 							浏览员工信息</a>
 
@@ -195,7 +261,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Member/index">
+							<a href="/discuz/index.php/Admin/Member/index">
 
 							浏览用户信息</a>
 
@@ -224,7 +290,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Topic/index">
+							<a href="/discuz/index.php/Admin/Topic/index">
 
 							浏览版块信息</a>
 
@@ -233,7 +299,7 @@
 
 							<li >
 
-							<a href="__MODULE__/Topic/add">
+							<a href="/discuz/index.php/Admin/Topic/add">
 
 							新增版块</a>
 
@@ -261,7 +327,7 @@
 
 						<li >
 
-							<a href="__MODULE__/News/index">
+							<a href="/discuz/index.php/Admin/News/index">
 
 							浏览发帖信息</a>
 
@@ -269,7 +335,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Reply/index">
+							<a href="/discuz/index.php/Admin/Reply/index">
 
 							浏览回帖信息</a>
 
@@ -277,7 +343,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Reply/index">
+							<a href="/discuz/index.php/Admin/Reply/index">
 
 							浏览评论信息</a>
 
@@ -304,7 +370,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Notice/index">
+							<a href="/discuz/index.php/Admin/Notice/index">
 
 							浏览公告信息</a>
 
@@ -312,7 +378,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Notice/add">
+							<a href="/discuz/index.php/Admin/Notice/add">
 
 							添加公告</a>
 
@@ -323,7 +389,7 @@
 				</li>
 
 
-				<li class="">
+				<li class="active">
 
 					<a href="javascript:;">
 
@@ -337,17 +403,17 @@
 
 					<ul class="sub-menu">
 
-						<li >
+						<li class="">
 
-							<a href="__MODULE__/Ad/index">
+							<a href="/discuz/index.php/Admin/Ad/index">
 
 							浏览广告信息</a>
 
 						</li>
 
-						<li >
+						<li class="active">
 
-							<a href="__MODULE__/Ad/add">
+							<a href="/discuz/index.php/Admin/Ad/add">
 
 							新增广告信息</a>
 
@@ -373,7 +439,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Image/index">
+							<a href="/discuz/index.php/Admin/Image/index">
 
 							浏览相册</a>
 
@@ -381,7 +447,7 @@
 
 						<li >
 
-							<a href="__MODULE__/Image/add">
+							<a href="/discuz/index.php/Admin/Image/add">
 
 							添加相册</a>
 
@@ -533,7 +599,7 @@
 
 						<h3 class="page-title">
 
-							添加信息
+							添加广告
 
 						</h3>
 
@@ -543,7 +609,7 @@
 
 								<i class="icon-home"></i>
 
-								<a href="__MODULE__/Index/index">首页</a> 
+								<a href="/discuz/index.php/Admin/Index/index">首页</a> 
 
 								<i class="icon-angle-right"></i>
 
@@ -551,16 +617,16 @@
 
 							<li>
 
-								成员管理
+								广告管理
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li>浏览员工信息
+							<li>浏览广告信息
 								<i class="icon-angle-right"></i>
 							</li>
-							<li>添加信息</li>
+							<li>添加广告</li>
 
 						</ul>
 
@@ -604,83 +670,56 @@
 
 								<!-- BEGIN FORM-->
 
-								<form method="post" action="__URL__/insert" class="form-horizontal" enctype="multipart/form-data">
+								<form method="post" action="/discuz/index.php/Admin/Ad/insert" class="form-horizontal" enctype="multipart/form-data">
 
 									<div class="control-group">
 
-										<label class="control-label">用户名</label>
+										<label class="control-label">标题</label>
 
 										<div class="controls">
 
-											<input type="text" name="user_name" class="span6 m-wrap popovers" placeholder="请输入用户名" />
+											<input type="text" name="ad_title" class="span6 m-wrap popovers" placeholder="请写入标题" />
 
 										</div>
 									
 									</div>
 									
+
 									<div class="control-group">
 
-										<label class="control-label">性别</label>
+										<label class="control-label">链接</label>
 
 										<div class="controls">
 
-											<label class="radio">
-
-											<input type="radio" name="user_sex" value="0" checked />
-
-											男
-
-											</label>
-
-											<label class="radio">
-
-											<input type="radio" name="user_sex" value="1" />
-
-											女
-
-											</label>  
-
-											
+											<input type="text" name="ad_link" class="span6 m-wrap popovers" placeholder="请写入链接" />
 
 										</div>
 
 									</div>
-									
 
 									<div class="control-group">
 
-										<label class="control-label">密码</label>
+										<label class="control-label">图片</label>
 
 										<div class="controls">
 
-											<input type="password" name="user_pass" class="span6 m-wrap popovers" placeholder="请输入密码" />
+											<input type="file" name="ad_imgsrc" />
 
 										</div>
-
+									
 									</div>
 								
 
-									<div class="control-group">
-
-										<label class="control-label">Email </label>
-
-										<div class="controls">
-
-											<div class="input-prepend"><span class="add-on">@</span><input class="m-wrap " type="text" name="user_email" placeholder="请输入邮箱" />
-
-											</div>
-
-										</div>
-
-									</div>
+									
 
 									<div class="control-group">
 
-										<label class="control-label">头像</label>
+										<label class="control-label">广告内容</label>
 
 										<div class="controls">
 
-											<input type="file" name="user_imgsrc" />
+											<textarea name="ad_content" class="large m-wrap" rows="4" placeholder="请输入公告内容"></textarea>
+
 
 										</div>
 									
@@ -690,11 +729,11 @@
 
 									<div class="control-group">
 
-										<label class="control-label">地址</label>
+										<label class="control-label">失效时间</label>
 
 										<div class="controls">
 
-											<input type="text" name="user_address" class="span6 m-wrap popovers"placeholder="请输入地址" />
+											<input type="text" name="ad_time" class="span6 m-wrap popovers"placeholder="请输入时间" />
 
 										</div>
 									
@@ -763,83 +802,83 @@
 
 	<!-- BEGIN CORE PLUGINS -->
 
-	<script src="__PUBLIC__/media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<script src="/discuz/Public/media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
 
-	<script src="__PUBLIC__/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="/discuz/Public/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
 
 	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 
-	<script src="__PUBLIC__/media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
+	<script src="/discuz/Public/media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
 
-	<script src="__PUBLIC__/media/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/discuz/Public/media/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<!--[if lt IE 9]>
 
-	<script src="__PUBLIC__/media/js/excanvas.min.js"></script>
+	<script src="/discuz/Public/media/js/excanvas.min.js"></script>
 
-	<script src="__PUBLIC__/media/js/respond.min.js"></script>  
+	<script src="/discuz/Public/media/js/respond.min.js"></script>  
 
 	<![endif]-->   
 
-	<script src="__PUBLIC__/media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+	<script src="/discuz/Public/media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
 
-	<script src="__PUBLIC__/media/js/jquery.blockui.min.js" type="text/javascript"></script>  
+	<script src="/discuz/Public/media/js/jquery.blockui.min.js" type="text/javascript"></script>  
 
-	<script src="__PUBLIC__/media/js/jquery.cookie.min.js" type="text/javascript"></script>
+	<script src="/discuz/Public/media/js/jquery.cookie.min.js" type="text/javascript"></script>
 
-	<script src="__PUBLIC__/media/js/jquery.uniform.min.js" type="text/javascript" ></script>
+	<script src="/discuz/Public/media/js/jquery.uniform.min.js" type="text/javascript" ></script>
 
 	<!-- END CORE PLUGINS -->
 
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/ckeditor.js"></script>  
+	<script type="text/javascript" src="/discuz/Public/media/js/ckeditor.js"></script>  
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/bootstrap-fileupload.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/bootstrap-fileupload.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/chosen.jquery.min.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/select2.min.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/select2.min.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/wysihtml5-0.3.0.js"></script> 
+	<script type="text/javascript" src="/discuz/Public/media/js/wysihtml5-0.3.0.js"></script> 
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/bootstrap-wysihtml5.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/bootstrap-wysihtml5.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/jquery.tagsinput.min.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/jquery.tagsinput.min.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/jquery.toggle.buttons.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/jquery.toggle.buttons.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/bootstrap-datepicker.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/bootstrap-datetimepicker.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/bootstrap-datetimepicker.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/clockface.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/clockface.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/date.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/date.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/daterangepicker.js"></script> 
+	<script type="text/javascript" src="/discuz/Public/media/js/daterangepicker.js"></script> 
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/bootstrap-colorpicker.js"></script>  
+	<script type="text/javascript" src="/discuz/Public/media/js/bootstrap-colorpicker.js"></script>  
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/bootstrap-timepicker.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/bootstrap-timepicker.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/jquery.inputmask.bundle.min.js"></script>   
+	<script type="text/javascript" src="/discuz/Public/media/js/jquery.inputmask.bundle.min.js"></script>   
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/jquery.input-ip-address-control-1.0.min.js"></script>
+	<script type="text/javascript" src="/discuz/Public/media/js/jquery.input-ip-address-control-1.0.min.js"></script>
 
-	<script type="text/javascript" src="__PUBLIC__/media/js/jquery.multi-select.js"></script>   
+	<script type="text/javascript" src="/discuz/Public/media/js/jquery.multi-select.js"></script>   
 
-	<script src="__PUBLIC__/media/js/bootstrap-modal.js" type="text/javascript" ></script>
+	<script src="/discuz/Public/media/js/bootstrap-modal.js" type="text/javascript" ></script>
 
-	<script src="__PUBLIC__/media/js/bootstrap-modalmanager.js" type="text/javascript" ></script> 
+	<script src="/discuz/Public/media/js/bootstrap-modalmanager.js" type="text/javascript" ></script> 
 
 	<!-- END PAGE LEVEL PLUGINS -->
 
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 
-	<script src="__PUBLIC__/media/js/app.js"></script>
+	<script src="/discuz/Public/media/js/app.js"></script>
 
-	<script src="__PUBLIC__/media/js/form-components.js"></script>     
+	<script src="/discuz/Public/media/js/form-components.js"></script>     
 
 	<!-- END PAGE LEVEL SCRIPTS -->
 

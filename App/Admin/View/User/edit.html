@@ -147,45 +147,28 @@
 						<li >
 
 							<a href="__MODULE__/Access/index">
+								浏览员工信息
+							</a>
 
-							Basic Tables</a>
+						</li>
+	<li >
+
+							<a href="__MODULE__/Role/index">
+
+								浏览角色信息
+							</a>
 
 						</li>
 
 						<li >
 
-							<a href="table_responsive.html">
+							<a href="__MODULE__/Node/index">
 
-							Responsive Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="table_managed.html">
-
-							Managed Tables</a>
+								浏览节点信息
+							</a>
 
 						</li>
-
-						<li >
-
-							<a href="table_editable.html">
-
-							Editable Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="table_advanced.html">
-
-							Advanced Tables</a>
-
-						</li>
-
 					</ul>
-
 				</li>
 
 				
@@ -610,8 +593,7 @@
 
 									
 
-									<a href="javascript:;" class="reload"></a>
-
+									
 									<a href="javascript:;" class="remove"></a>
 
 								</div>
@@ -622,7 +604,7 @@
 
 								<!-- BEGIN FORM-->
 
-								<form method="post" action="__URL__/update" class="form-horizontal">
+								<form method="post" action="__URL__/update" class="form-horizontal" enctype="multipart/form-data">
 									<input type="hidden" name="user_id" value="{$vo.user_id}">
 									<div class="control-group">
 

@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>浏览员工信息</title>
+	<title>浏览公告信息</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -188,7 +188,7 @@
 
 						</li>
 
-					<li >
+						<li >
 
 							<a href="/discuz/index.php/Admin/Role/index">
 
@@ -209,7 +209,7 @@
 
 				</li>
 				
-				<li class="active">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -326,7 +326,7 @@
 				</li>
 
 
-				<li class="">
+				<li class="active">
 
 					<a href="javascript:;">
 
@@ -340,7 +340,7 @@
 
 					<ul class="sub-menu">
 
-						<li >
+						<li class="active">
 
 							<a href="/discuz/index.php/Admin/Notice/index">
 
@@ -375,7 +375,7 @@
 
 					<ul class="sub-menu">
 
-						<li >
+						<li class="">
 
 							<a href="/discuz/index.php/Admin/Ad/index">
 
@@ -571,7 +571,7 @@
 
 						<h3 class="page-title">
 
-							浏览员工信息
+							浏览公告信息
 
 						</h3>
 
@@ -589,13 +589,13 @@
 
 							<li>
 
-								<a href="javascript:;">成员管理</a>
+								<a href="javascript:;">公告管理</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li>浏览员工信息</li>
+							<li>浏览公告信息</li>
 
 						</ul>
 
@@ -625,7 +625,7 @@
 
 								<div class="actions">
 
-									<a href="/discuz/index.php/Admin/User/add" class="btn blue"><i class="icon-pencil"></i> Add</a>
+									<a href="/discuz/index.php/Admin/Notice/add" class="btn blue"><i class="icon-pencil"></i> Add</a>
 
 									<div class="btn-group">
 
@@ -641,6 +641,7 @@
 
 											<li><a id='edit' href="#"><i class="icon-pencil"></i> Edit</a></li>
 
+											<!-- <li><a id= 'del' href="/discuz/index.php/Admin/User/del/id/<?php echo (C("TMPL_L_DELIM")); ?>item_id<?php echo (C("TMPL_R_DELIM")); ?>"><i class="icon-trash"></i> Delete</a></li> -->
 											<li><a id= 'del' href="#"><i class="icon-trash"></i> Delete</a></li>
 
 											
@@ -663,17 +664,12 @@
 
 											<th style="width:8px;"><input type="checkbox" class="group-checkable" data-set="#sample_2 .checkboxes" /></th>
 
-											<th>用户ID</th>
-											<th>用户名</th>
-											<th>性别</th>
-											<th>密码</th>
+											<th>公告ID</th>
+											<th>公告内容</th>
+											<th>发布者</th>
+											<th>发布时间</th>
 
-											<th class="hidden-480">Email</th>
-											<th>注册时间</th>
-											<th class="hidden-480">用户地址</th>
-										
 											
-
 										</tr>
 
 									</thead>
@@ -681,25 +677,21 @@
 									<tbody>
 
 										<?php if(is_array($list)): foreach($list as $key=>$vo): ?><tr class="odd gradeX"  >
-											<td><input type="checkbox" class="checkboxes" value="<?php echo ($vo["user_id"]); ?>" /></td>
+											<td><input type="checkbox" class="checkboxes" value="<?php echo ($vo["notice_id"]); ?>" /></td>
 
-											<td><?php echo ($vo["user_id"]); ?></td>
+											<td><?php echo ($vo["notice_id"]); ?></td>
 
 											
 
-											<td><?php echo ($vo["user_name"]); ?></td>
-											<td><?php if($vo["user_sex"] == 0 ): ?>男   <?php else: ?> 女<?php endif; ?></td>
+											<td><?php echo ($vo["notice_content"]); ?></td>
+											
 										
 
-											<td><?php echo ($vo["user_pass"]); ?></td>
+											<td><?php echo ($vo["notice_author"]); ?></td>
 
-											<td class="hidden-480"><a href="mailto:shuxer@gmail.com"><?php echo ($vo["user_email"]); ?></a></td>
+											
+											<td><?php echo ($vo["notice_time"]); ?></td>
 
-											<td><?php echo ($vo["user_addtime"]); ?></td>
-
-											<td><?php echo ($vo["user_address"]); ?></td>
-
-										
 											
 
 										</tr><?php endforeach; endif; ?>
@@ -829,7 +821,7 @@
 			$('#edit').click(function(){
 				var data=0;
 				var data = $('span.checked').parent().parent().next().html();
-				$(this).attr('href','/discuz/index.php/Admin/User/edit/id/'+data);
+				$(this).attr('href','/discuz/index.php/Admin/Notice/edit/id/'+data);
 			});
 			
 			$('#del').click(function(){
@@ -837,7 +829,7 @@
 				var data = $('span.checked').first().parent().parent().next().html();
 				
 				// alert(data);
-				$(this).attr('href','/discuz/index.php/Admin/User/del/id/'+data);
+				$(this).attr('href','/discuz/index.php/Admin/Notice/del/id/'+data);
 			});
 			
 		

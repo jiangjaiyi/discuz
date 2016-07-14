@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>添加员工</title>
+	<title>修改公告信息</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -130,7 +130,7 @@
 				</li>
 
 
-			<li class="">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -141,7 +141,8 @@
 					<span class="arrow "></span>
 
 					</a>
-				<ul class="sub-menu">
+
+					<ul class="sub-menu">
 
 						<li >
 
@@ -169,9 +170,11 @@
 
 						</li>
 					</ul>
+
 				</li>
+
 				
-				<li class="active">
+				<li class="">
 
 					<a href="javascript:;">
 
@@ -288,7 +291,7 @@
 				</li>
 
 
-				<li class="">
+				<li class="active">
 
 					<a href="javascript:;">
 
@@ -302,7 +305,7 @@
 
 					<ul class="sub-menu">
 
-						<li >
+						<li class="active">
 
 							<a href="__MODULE__/Notice/index">
 
@@ -533,7 +536,7 @@
 
 						<h3 class="page-title">
 
-							添加信息
+							修改信息
 
 						</h3>
 
@@ -551,16 +554,16 @@
 
 							<li>
 
-								成员管理
+								公告管理
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li>浏览员工信息
+							<li>浏览公告信息
 								<i class="icon-angle-right"></i>
 							</li>
-							<li>添加信息</li>
+							<li>修改信息</li>
 
 						</ul>
 
@@ -590,9 +593,6 @@
 
 									<a href="javascript:;" class="collapse"></a>
 
-									
-
-									
 
 									<a href="javascript:;" class="remove"></a>
 
@@ -604,102 +604,32 @@
 
 								<!-- BEGIN FORM-->
 
-								<form method="post" action="__URL__/insert" class="form-horizontal" enctype="multipart/form-data">
-
+								<form method="post" action="__URL__/update" class="form-horizontal" >
+									<input type="hidden" name="notice_id" value="{$vo.notice_id}">
 									<div class="control-group">
 
-										<label class="control-label">用户名</label>
+										<label class="control-label">公告内容</label>
 
 										<div class="controls">
 
-											<input type="text" name="user_name" class="span6 m-wrap popovers" placeholder="请输入用户名" />
+												<textarea name="notice_content" class="large m-wrap" rows="4" >{$vo.notice_content}</textarea>
 
 										</div>
 									
 									</div>
 									
-									<div class="control-group">
-
-										<label class="control-label">性别</label>
-
-										<div class="controls">
-
-											<label class="radio">
-
-											<input type="radio" name="user_sex" value="0" checked />
-
-											男
-
-											</label>
-
-											<label class="radio">
-
-											<input type="radio" name="user_sex" value="1" />
-
-											女
-
-											</label>  
-
-											
-
-										</div>
-
-									</div>
-									
 
 									<div class="control-group">
 
-										<label class="control-label">密码</label>
+										<label class="control-label">发布者</label>
 
 										<div class="controls">
 
-											<input type="password" name="user_pass" class="span6 m-wrap popovers" placeholder="请输入密码" />
-
-										</div>
-
-									</div>
-								
-
-									<div class="control-group">
-
-										<label class="control-label">Email </label>
-
-										<div class="controls">
-
-											<div class="input-prepend"><span class="add-on">@</span><input class="m-wrap " type="text" name="user_email" placeholder="请输入邮箱" />
-
-											</div>
-
-										</div>
-
-									</div>
-
-									<div class="control-group">
-
-										<label class="control-label">头像</label>
-
-										<div class="controls">
-
-											<input type="file" name="user_imgsrc" />
+											<input type="text" name="notice_author" class="span6 m-wrap popovers" value="{$vo.notice_author}" />
 
 										</div>
 									
 									</div>
-
-									
-
-									<div class="control-group">
-
-										<label class="control-label">地址</label>
-
-										<div class="controls">
-
-											<input type="text" name="user_address" class="span6 m-wrap popovers"placeholder="请输入地址" />
-
-										</div>
-									
-									</div>
-									
 									
 
 									<div class="form-actions">

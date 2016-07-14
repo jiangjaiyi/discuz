@@ -7,14 +7,29 @@ use Think\Controller;
  */
 class CommonController extends Controller{
 	
-	//在Controller类中构造方法执行后则会自动调用的方法。
-	public function _initialize(){
-		//是否的登录验证
-		// if(empty($_SESSION['adminuser'])){
-		// 	$this->redirect("Public/login");
-		// 	exit();
-		// }
-	}
+	// //在Controller类中构造方法执行后则会自动调用的方法。
+	// public function _initialize(){
+	// 	//是否的登录验证
+	// 	if(empty($_SESSION['adminuser'])){
+	// 		$this->redirect("Public/login");
+	// 		exit();
+	// 	}
+        
+ //        //特殊用户
+ //        if($_SESSION['adminuser']['username']=="admin"){
+ //            return;
+ //        }
+        
+ //        //判断是否有此权限
+ //        $cname = strtolower(CONTROLLER_NAME);//获取当前控制器名
+ //        $aname = strtolower(ACTION_NAME);//获取当前控制器的方法名
+ //        $nodelist = $_SESSION['nodelist']; //获取当前用户的权限列表
+ //        //判断nodelist没有当前控制器或方法
+ //        if(empty($nodelist[$cname]) || !in_array($aname,$nodelist[$cname])){
+ //            $this->error("抱歉！你没有此操作权限！");
+ //            exit();
+ //        }
+	// }
 
 
 	
